@@ -2,11 +2,12 @@
 Simple toolpack allowing quick system changes to reduce software friction while using the Citrix/HCHB desktop application. Blocks the incessant "Waiting for printer connection..." popups! :)
 
 Basic flow:
-graph TD
+
+    graph TD
     Start([Launch Master_Toolbox.bat]) --> AdminCheck{Admin Rights?}
     AdminCheck -- No --> Error[Display Error & Exit]
     AdminCheck -- Yes --> Menu[Display Master Menu]
-
+    
     Menu -- Choice 1 --> Popup[Popup_Blocker.ps1]
     Menu -- Choice 2 --> DLP[Print_DLP.ps1]
     Menu -- Choice 3 --> Both[Both Scripts]
